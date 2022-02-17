@@ -1,9 +1,7 @@
 package com.example.casualcrudproject;
 
-import com.example.casualcrudproject.WebConfig.SecurityConfig;
 import com.example.casualcrudproject.controllers.EmployeeController;
 import com.example.casualcrudproject.domain.Employee;
-import com.jayway.jsonpath.JsonPath;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,9 +10,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.http.*;
 import org.junit.jupiter.api.BeforeEach;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.ResultMatcher;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
@@ -92,7 +88,7 @@ public class EmployeeControllerTests {
     }
 
   @Test
-    public void getMyIdShouldReturnRightEmployeeNumOne() throws Exception {
+    public void getByIdShouldReturnRightEmployeeNumOne() throws Exception {
         ResponseEntity<String> response = restTemplate.exchange(BASE_URL + port + GET_BY_ID_TEST_URL_ONE,
                 HttpMethod.GET, request, String.class);
 
@@ -101,7 +97,7 @@ public class EmployeeControllerTests {
     }
 
     @Test
-    public void getMyIdShouldReturnRightEmployeeNumTwo() throws Exception {
+    public void getByIdShouldReturnRightEmployeeNumTwo() throws Exception {
         ResponseEntity<String> response = restTemplate.exchange(BASE_URL + port + GET_BY_ID_TEST_URL_TWO,
                 HttpMethod.GET, request, String.class);
 
