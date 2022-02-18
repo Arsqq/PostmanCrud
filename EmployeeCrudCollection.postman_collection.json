@@ -1,0 +1,314 @@
+{
+	"info": {
+		"_postman_id": "ef0419b2-1f74-4bc3-a887-e1e3fdf8b18d",
+		"name": "EmployeeCrudCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllEmployeeS",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "Arseny ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "Basic",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{url}}employee",
+					"host": [
+						"{{url}}employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllEmployeeCategories",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "2",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "John",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}employeeCategory",
+					"host": [
+						"{{url}}employeeCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddEmployeeCategory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Tester\",\r\n    [\r\n        {\r\n            \"name\":\"Ivan\"\r\n        }\r\n        {\r\n            \"name\":\"Ars\"\r\n        }\r\n        {\r\n            \"name\":\"Yan\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}employeeCategory",
+					"host": [
+						"{{url}}employeeCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddEmployee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}",
+					"host": [
+						"{{url}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditEmployee",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}employee/{id}",
+					"host": [
+						"{{url}}employee"
+					],
+					"path": [
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditEmployeeCategory",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "FindEmployeeById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "2",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "John",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}employee/44",
+					"host": [
+						"{{url}}employee"
+					],
+					"path": [
+						"44"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindEmployeeCategoryById",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "2",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "John",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}employeeCategory/27",
+					"host": [
+						"{{url}}employeeCategory"
+					],
+					"path": [
+						"27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteEmployee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:8082/"
+		}
+	]
+}
